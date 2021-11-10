@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    font-size: 16px;
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --v-pale-blue: hsl(225, 100%, 98%);
+    --desat-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right -13rem;
+    background-color: var(--pale-blue);
+}
+
+button {
+    display: block;
+}
+
+/*---------- CARD WRAPPER ----------*/
+div.card-wrapper {
+    height: 36rem;
+    width: 23rem;
+    background-color: white;
+    margin: auto;
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+    border-radius: 1.2rem;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+/*----- CARD IMAGE -----*/
+img.card-img {
+    width: 100%;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+
+/*----- CARD CONTENT -----*/
+
+/*--- MAIN TEXT ---*/
+div.card-content-wrapper {
+    width: 80%;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+div.card-content-wrapper h1 {
+    font-size: 1.4rem;
+    font-weight: 900;
+    margin-bottom: 1.2rem;
+    color: var(--dark-blue);
+}
+
+div.card-content-wrapper p.card-main-text {
+    color: var(--desat-blue);
+    font-size: 0.85rem;
+    line-height: 1.3rem;
+    margin-bottom: 1.3rem;
+}
+
+div.card-content-wrapper h1,
+div.card-content-wrapper p.card-main-text {
+    text-align: center;
+    font-family: 'Red Hat Display', 'sans-serif';
+}
+
+/*--- PLAN ---*/
+div.plan-wrapper {
+    background-color: var(--v-pale-blue);
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    height: 4.7rem;
+    border-radius: 0.8rem;
+    margin-bottom: 1.3rem;
+}
+
+div.plan-wrapper img.music-logo {
+    width: 55%;
+    margin: auto;
+}
+
+div.plan-wrapper p,
+div.plan-wrapper a {
+    font-family: 'Red Hat Display', 'sans-serif';
+}
+
+div.plan-wrapper div.plan-details p.plan-name {
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+    color: var(--dark-blue);
+}
+
+div.plan-wrapper div.plan-details p.plan-price {
+    font-size: 0.8rem;
+    color: var(--desat-blue);
+}
+
+div.plan-wrapper a.plan-change {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--bright-blue);
+    text-decoration: underline;
+}
+
+div.plan-wrapper a.plan-change:hover {
+    color: hsl(245, 83%, 68%);
+}
+
+/*--- PAYMENT OPTIONS ---*/
+button.btn {
+    width: 100%;
+    border: none;
+    border-radius: 0.55rem;
+    font-family: 'Red Hat Display', 'sans-serif';
+    font-weight: 700;
+    letter-spacing: 0.05rem;;
+}
+
+button.btn-pay {
+    background-color: var(--bright-blue);
+    color: white;
+    -webkit-box-shadow: 0px 17px 17px -13px var(--bright-blue);
+    -moz-box-shadow: 0px 17px 17px -13px var(--bright-blue);
+    box-shadow: 0px 17px 17px -13px var(--bright-blue);
+    margin-bottom: 1.5rem;
+    height: 2.6rem;
+}
+
+button.btn-pay:hover {
+    background-color: hsl(245, 83%, 68%);
+}
+
+button.btn-cancel {
+    background: white;
+    color: var(--desat-blue);
+}
+
+button.btn-cancel:hover {
+    color: black;
+}
+
+/*---------- MEDIA QUERIES ----------*/
+@media only screen and (max-width: 480px) {
+    :root {
+        font-size: 14px;
+    }
+
+    /*---------- CARD WRAPPER ----------*/
+    div.card-wrapper {
+        height: 38rem;
+    }
+    /*----- CARD CONTENT -----*/
+
+    /*--- MAIN TEXT ---*/
+    div.card-content-wrapper {
+        margin-top: 1.2rem;
+        width: 85%;
+    }
+
+    div.card-content-wrapper h1 {
+        font-size: 1.6rem;
+    }
+
+    div.card-content-wrapper p.card-main-text {
+        font-size: 1rem;
+        width: 85%;
+        margin: auto;
+        line-height: 1.6rem;
+        margin-bottom: 1.6rem;
+    }
+
+    /*--- PAYMENT OPTIONS ---*/
+    button.btn-pay {
+        height: 3.5rem;
+    }
+}
